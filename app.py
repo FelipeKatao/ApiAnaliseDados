@@ -1,6 +1,8 @@
 from flask import Flask
+from blueprints.Dados import Register_Dados
 
 app = Flask(__name__)
+app.register_blueprint(Register_Dados)
 
 @app.route("/")
 def initRoute():
