@@ -11,5 +11,5 @@ def initRoute():
 def SobreProjeto():
     return "Projeto de analise de dados: utilizando uma API para esa leitura"
 
-
-app.run(debug=True)
+if(__name__ == '__main__'):
+    app.run(debug=True)
