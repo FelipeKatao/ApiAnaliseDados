@@ -1,8 +1,10 @@
 from flask import Flask
 from blueprints.Dados import Register_Dados
+from repository.DataAnalitic_sevice import DataAnaliticService
 
 app = Flask(__name__)
 app.register_blueprint(Register_Dados)
+__DataAnaliticService = DataAnaliticService()
 
 @app.route("/")
 def initRoute():
@@ -12,6 +14,9 @@ def initRoute():
 @app.route("/sobre")
 def SobreProjeto():
     return "Projeto de analise de dados: utilizando uma API para esa leitura"
+@app.route("/acessardadosfrios")
+def AcessarDados():
+    return __DataAnaliticService.AcessarTabelaDadosFrios()
 
 
 
