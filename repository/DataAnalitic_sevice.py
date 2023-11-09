@@ -1,4 +1,4 @@
-from DataAnalitc_Repository import DataAnalitic
+from repository.DataAnalitc_Repository import DataAnalitic
 
 class DataAnaliticService():
     def __init__(self) -> None:

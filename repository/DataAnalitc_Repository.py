@@ -2,7 +2,7 @@ import pymysql
 
 class DataAnalitic():
     def __init__(self) -> None:
-        self.con = pymysql.connect(host="",user="",passwd="",database="")
+        self.con = pymysql.connect(host="bd4free.net",user="datauser_ds",passwd="Datauser23",database="datascience")
     def AcessarBanco(self,NomeTabela):
         sql = f"""
           SELECT * FROM {NomeTabela} 
