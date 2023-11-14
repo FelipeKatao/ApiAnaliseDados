@@ -11,7 +11,7 @@ class DataAnalitic():
             cursor = self.con.cursor()
             cursor.execute(sql)
             result = cursor.fetchall()
-            return result
+            return list(result)
         except:
             return "Ocorreu um erro no processamento"
         

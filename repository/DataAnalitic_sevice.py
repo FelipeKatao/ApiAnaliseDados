@@ -4,6 +4,6 @@ class DataAnaliticService():
     def __init__(self) -> None:
         self.__DataAnalitic = DataAnalitic()
         
-    def AcessarTabelaDadosFrios(self,database):
+    def AcessarDadosBrutos(self,database):
         return self.__DataAnalitic.AcessarBanco(database)
     
