@@ -2,7 +2,7 @@ import pymysql
 
 class DataAnalitic():
     def __init__(self) -> None:
-        self.con = pymysql.connect(host="bd4free.net",user="datauser_ds",passwd="Datauser23",database="datascience")
+        self.con = pymysql.connect(host="127.0.0.1",user="root",passwd="alunolab",database="folhadepagamento")
     def AcessarBanco(self,NomeTabela):
         sql = f"""
           SELECT * FROM {NomeTabela} 
@@ -10,7 +10,7 @@ class DataAnalitic():
         try:
             cursor = self.con.cursor()
             cursor.execute(sql)
-            result = cursor.fetchone()
+            result = cursor.fetchall()
             return result
         except:
             return "Ocorreu um erro no processamento"

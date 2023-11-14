@@ -14,9 +14,9 @@ def initRoute():
 @app.route("/sobre")
 def SobreProjeto():
     return "Projeto de analise de dados: utilizando uma API para esa leitura"
-@app.route("/acessardadosfrios")
-def AcessarDados():
-    return __DataAnaliticService.AcessarTabelaDadosFrios()
+@app.route("/dadosbrutos/<database>")
+def AcessarDados(database):
+    return str(__DataAnaliticService.AcessarTabelaDadosFrios(database))
 
 
 
