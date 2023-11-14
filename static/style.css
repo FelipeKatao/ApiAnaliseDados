@@ -1,0 +1,15 @@
+.card{
+    background-color: blue; /* Mudar a cor */
+    color: white; /* Mudar a fonte */
+    padding: 2vh; 
+    height: 20vh;
+    width: 30vh;
+    margin-left: 4vh;
+    margin-top: 4vh;
+    border-radius: 2vh;
+}
+
+#dados{
+    display: flex;
+    flex-direction: row;
+}
