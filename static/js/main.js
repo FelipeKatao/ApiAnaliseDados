@@ -19,3 +19,10 @@ fetch("http://127.0.0.1:5000/dadosbrutos/cliente").then(response => response.jso
         `
     })
     });
+
+
+
+import sessionBase from "./session";
+
+let se = sessionBase()
+se.functionBase()
