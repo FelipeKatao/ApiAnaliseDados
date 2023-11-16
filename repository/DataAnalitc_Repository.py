@@ -21,4 +21,4 @@ class DataAnalitic():
             return list(result)
         except  Exception as e :
             return "Ocorreu um erro no processamento "+str(e)
-        
+         

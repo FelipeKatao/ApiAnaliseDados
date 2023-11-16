@@ -1,15 +1,16 @@
 from flask import Flask,render_template
 from blueprints.Dados import Register_Dados
+from blueprints.paginas import Paginas_site
 from service.DataAnalitic_sevice import DataAnaliticService
 
 app = Flask(__name__)
 app.register_blueprint(Register_Dados)
+app.register_blueprint(Paginas_site)
 __DataAnaliticService = DataAnaliticService()
 
 @app.route("/")
 def initRoute():
     return "seja bem vindo a analise de dados "
-
 
 @app.route("/<database>")
 def AcessarDados(database):
