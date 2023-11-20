@@ -2,11 +2,11 @@ import pymysql
 
 class DataAnalitic():
     def __init__(self) -> None:
-        self.con = pymysql.connect(host="127.0.0.1",user="root",passwd="alunolab",database="folhadepagamento")
+        self.con = pymysql.connect(host="127.0.0.1",user="root",passwd="!formbase12#Carol")
         
     def AtualizarBanco(self):
         self.con.close()
-        self.con = pymysql.connect(host="127.0.0.1",user="root",passwd="alunolab",database="folhadepagamento")
+        self.con = pymysql.connect(host="127.0.0.1",user="root",passwd="!formbase12#Carol")
         
     def AcessarBanco(self,NomeTabela):
             

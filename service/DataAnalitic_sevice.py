@@ -6,4 +6,6 @@ class DataAnaliticService():
         
     def AcessarDadosBrutos(self,database):
         return self.__DataAnalitic.AcessarBanco(database)
+    def teste(self):
+        return {"object":"iooi"}
     
