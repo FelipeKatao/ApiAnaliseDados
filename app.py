@@ -1,6 +1,7 @@
 from flask import Flask,render_template,jsonify,session,request
 from dotenv import load_dotenv
 import os 
+import logging
 from blueprints.Dados import Register_Dados
 from blueprints.paginas import Paginas_site
 from service.DataAnalitic_sevice import DataAnaliticService
@@ -43,6 +44,27 @@ def Acesso():
     if(auth and auth.username == 'Usuario'):
         return "Logado com sucesso",200
     return "Não possui autorização",401
+
+def end(endpoint,val):
+    val['a'] = 3
+
+app.url_defaults(end)
+@app.route('/red/<a>')
+def Acesso_red(a):
+    return app.url_for('route_teste')
+
+
+@app.route('/Tr/<username>')
+def teste_url_a(username):
+    
+    return str(app.url_for('Acesso_red'))
+
+logging.basicConfig(filename='Loger_base')
+
+@app.route("/basic")
+def Teste_base_log():
+    app.logger.info("Cadastro feito com sucesso")
+    return 'Feito com sucesso'
 
 app.permanent_session_lifetime = 60
 load_dotenv()
