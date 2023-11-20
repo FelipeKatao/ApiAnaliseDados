@@ -66,6 +66,18 @@ def Teste_base_log():
     app.logger.info("Cadastro feito com sucesso")
     return 'Feito com sucesso'
 
+@app.route('/login')
+def login_user():
+    session['username'] = 'Felipe'
+    return str(session.get('username'))
+
+@app.route('/acessUser')
+def acess_user():
+    username = session.get('username')
+    if(username is not None):
+        return "você esta logado"
+    return "você não esta logado"
+
 app.permanent_session_lifetime = 60
 load_dotenv()
 

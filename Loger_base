@@ -10,3 +10,43 @@ INFO:werkzeug: * Detected change in 'd:\\Projeto\\ApiAnaliseDados\\app.py', relo
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 782-701-903
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 782-701-903
+INFO:werkzeug:127.0.0.1 - - [20/Nov/2023 13:33:53] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Nov/2023 13:33:57] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Nov/2023 13:34:04] "GET /acessUser HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Nov/2023 13:34:05] "GET /acessUser HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'd:\\Projeto\\ApiAnaliseDados\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 782-701-903
+INFO:werkzeug:127.0.0.1 - - [20/Nov/2023 13:34:22] "GET /acessUser HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Nov/2023 13:34:23] "GET /acessUser HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'd:\\Projeto\\ApiAnaliseDados\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 782-701-903
+INFO:werkzeug:127.0.0.1 - - [20/Nov/2023 13:34:49] "GET /acessUser HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'd:\\Projeto\\ApiAnaliseDados\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 782-701-903
+INFO:werkzeug:127.0.0.1 - - [20/Nov/2023 13:35:18] "GET /acessUser HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'd:\\Projeto\\ApiAnaliseDados\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 782-701-903
+INFO:werkzeug:127.0.0.1 - - [20/Nov/2023 13:36:15] "GET /acessUser HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Nov/2023 13:36:22] "[35m[1mGET /login HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'd:\\Projeto\\ApiAnaliseDados\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 782-701-903
