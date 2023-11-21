@@ -1,0 +1,123 @@
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-439-806
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-439-806
+INFO:app:logando...
+ERROR:app:Login realizado com falhaDadoMe
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2023 10:26:40] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\SNMACT145\\Desktop\\ApiAnaliseDados\\controler\\login_controller.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-439-806
+INFO:werkzeug: * Detected change in 'c:\\Users\\SNMACT145\\Desktop\\ApiAnaliseDados\\controler\\login_controller.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-439-806
+INFO:werkzeug: * Detected change in 'c:\\Users\\SNMACT145\\Desktop\\ApiAnaliseDados\\controler\\login_controller.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-439-806
+INFO:werkzeug: * Detected change in 'c:\\Users\\SNMACT145\\Desktop\\ApiAnaliseDados\\controler\\login_controller.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-439-806
+INFO:werkzeug: * Detected change in 'c:\\Users\\SNMACT145\\Desktop\\ApiAnaliseDados\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-439-806
+INFO:werkzeug: * Detected change in 'c:\\Users\\SNMACT145\\Desktop\\ApiAnaliseDados\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-439-806
+INFO:werkzeug: * Detected change in 'c:\\Users\\SNMACT145\\Desktop\\ApiAnaliseDados\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-439-806
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-439-806
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2023 11:42:20] "[33mGET /login HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2023 11:42:23] "[33mGET /login HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2023 11:42:35] "[35m[1mGET /loginbase/login HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\SNMACT145\\Desktop\\ApiAnaliseDados\\routes\\login_route.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-439-806
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2023 11:42:46] "[35m[1mGET /loginbase/login HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\SNMACT145\\Desktop\\ApiAnaliseDados\\routes\\login_route.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-439-806
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2023 11:43:15] "GET /loginbase/login HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\SNMACT145\\Desktop\\ApiAnaliseDados\\routes\\login_route.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-439-806
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2023 11:44:44] "[33mGET /loginbase/login HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2023 11:44:45] "[33mGET /loginbase/login HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2023 11:44:52] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2023 11:44:56] "GET / HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\SNMACT145\\Desktop\\ApiAnaliseDados\\routes\\login_route.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-439-806
+INFO:werkzeug: * Detected change in 'c:\\Users\\SNMACT145\\Desktop\\ApiAnaliseDados\\routes\\login_route.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-439-806
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-439-806
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2023 11:45:52] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2023 11:45:54] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2023 11:46:06] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-439-806
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2023 11:46:17] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\SNMACT145\\Desktop\\ApiAnaliseDados\\routes\\login_route.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-439-806
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2023 11:46:39] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-439-806
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2023 11:46:47] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2023 11:46:48] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\SNMACT145\\Desktop\\ApiAnaliseDados\\routes\\login_route.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-439-806
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-439-806
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2023 11:47:22] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Nov/2023 11:47:32] "GET /login HTTP/1.1" 200 -
