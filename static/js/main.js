@@ -13,13 +13,34 @@ function PaginaPrincipal(){
         oct8.ModifyContentContainer(document.getElementById("Pagina_projeto"),`
         <h1> Analise de dados </h1>
         <article>
-            <div>Analise por Graficos</div>
+            <div><a href='http://127.0.0.1:5000/#/dados'>Analise por Graficos</a></div>
             <div>Analise dos dados</div>
             <div>Modelos de analise</div>
         <article>
         `,true)
     }
 
+}
+
+function dadosPagina(){
+    fetch("http://127.0.0.1:5000/dados")
+    .then(response =>response.json())
+    .then(json =>{
+        console.log(json)
+        oct8.ModifyContentContainer(document.getElementById("Pagina_projeto"),`
+        <h1>Listagem da massa de dados</h1>
+        <div id='ListaDados'></div>
+        `,true)
+        let ListaDados = json.Dados_3040.Dados
+
+        ListaDados.forEach(element=>{
+            oct8.ModifyContentContainer(document.getElementById("ListaDados"),`
+                <div class='data_value'>${element}</div>
+            `)
+        })
+
+    })
+    
 }
 
 function PaginaSobre(){
@@ -39,6 +60,6 @@ function NotFoundPage(){
 
 
 oct8.CreateNewRoute("/sobre",PaginaSobre)
-
+oct8.CreateNewRoute("/dados",dadosPagina)
 oct8.AddNotFoundPage(PaginaPrincipal)
 oct8.LoadRoutes()

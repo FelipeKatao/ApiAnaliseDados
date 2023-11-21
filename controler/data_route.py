@@ -1,9 +1,18 @@
-from flask import render_template
+from flask import jsonify
+from pathlib import Path
+import json
 
-class DataRoutes():
+class Controler_dadosBrutos():
     def __init__(self) -> None:
         pass
 
-    def ListarProdutos(self):
-        return render_template('index.html')
+    def ListagemDados(self):
+        path = str(Path('Data'))
+        with open(path+"\data.json",'r') as arquivo:
+            dados = json.load(arquivo)
+        return jsonify(dados)
+    
+    def BaseDados(self):
+        return "all data"
+
     

@@ -6,4 +6,3 @@ class DataRoutes():
 
     def ListarProdutos(self):
         return render_template('index.html')
-    

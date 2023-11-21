@@ -19,3 +19,17 @@ footer{
     text-align: center;
     color: #635075;
 }
+#ListaDados{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.data_value{
+    background-color: #635075;
+    color: #d8b2fd;
+    padding: 2vh;
+    width: 10vh;
+    height: 3vh;
+    margin-left: 3vh;
+    margin-top: 2vh;
+}
