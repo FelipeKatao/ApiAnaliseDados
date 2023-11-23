@@ -3,6 +3,7 @@ from flask import Flask
 from routes.login_route import Login_route
 from view.data_views import DataRoutes
 from controler.data_route import Controler_dadosBrutos
+import pymysql
 
 app = Flask(__name__)
 DataRoute_= DataRoutes()
@@ -12,6 +13,10 @@ app.register_blueprint(Login_route)
 app.add_url_rule("/","ListarProdutos",DataRoute_.ListarProdutos,methods=['GET','POST'])
 app.add_url_rule("/dados","ListagemDados",DadosBrutos.ListagemDados)
 
+@app.route("/teste")
+def testeRota():
+    con = pymysql.connect(host='db4free.net',user='usuaro_0_poli',password='9090ola1',port=3306,charset='utf8')
+    return 'None'
 
 logging.basicConfig(filename='C:/Users/SNMACT145/Desktop/ApiAnaliseDados/logs/Dataserver.log')
 

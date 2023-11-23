@@ -121,3 +121,29 @@ WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 113-439-806
 INFO:werkzeug:127.0.0.1 - - [21/Nov/2023 11:47:22] "GET /login HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [21/Nov/2023 11:47:32] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 138-632-507
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2023 09:20:59] "[35m[1mGET /teste HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\SNMACT145\\Desktop\\ApiAnaliseDados\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 138-632-507
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2023 09:21:19] "[35m[1mGET /teste HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\SNMACT145\\Desktop\\ApiAnaliseDados\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 138-632-507
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2023 09:22:42] "[35m[1mGET /teste HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\SNMACT145\\Desktop\\ApiAnaliseDados\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 138-632-507
+INFO:werkzeug:127.0.0.1 - - [22/Nov/2023 09:26:59] "[35m[1mGET /teste HTTP/1.1[0m" 500 -
