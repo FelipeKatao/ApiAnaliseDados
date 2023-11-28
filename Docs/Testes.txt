@@ -1,0 +1,13 @@
+DELETE FROM `alunosbase`.`Alunos` WHERE (`Nome` = 'Felipe');
+INSERT INTO `alunosbase`.`Alunos` (`Nome`, `Matricula`, `DataNascimento`) VALUES ('Felipe', '609', '2000-01-01 00:00:00');
+SELECT * FROM Alunos;
+#Processo via XA
+XA START 'Aluno_inserido';
+	INSERT INTO `alunosbase`.`Alunos` (`Nome`, `Matricula`, `DataNascimento`) VALUES ('Felipe', '609', '2000-01-01 00:00:00');
+XA END 'Aluno_inserido';
+XA PREPARE 'Aluno_inserido'; #Até aqui é possivel usar o RECOVER PARA descobrir quais XA estão na fila de espera
+XA COMMIT 'Aluno_inserido';
+#Fim do Processo se não houver erros 
+
+XA ROLLBACK 'Aluno_inserido';
+XA RECOVER;
