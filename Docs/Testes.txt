@@ -1,13 +1,18 @@
-DELETE FROM `alunosbase`.`Alunos` WHERE (`Nome` = 'Felipe');
-INSERT INTO `alunosbase`.`Alunos` (`Nome`, `Matricula`, `DataNascimento`) VALUES ('Felipe', '609', '2000-01-01 00:00:00');
-SELECT * FROM Alunos;
-#Processo via XA
-XA START 'Aluno_inserido';
-	INSERT INTO `alunosbase`.`Alunos` (`Nome`, `Matricula`, `DataNascimento`) VALUES ('Felipe', '609', '2000-01-01 00:00:00');
-XA END 'Aluno_inserido';
-XA PREPARE 'Aluno_inserido'; #Até aqui é possivel usar o RECOVER PARA descobrir quais XA estão na fila de espera
-XA COMMIT 'Aluno_inserido';
-#Fim do Processo se não houver erros 
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Teste_Executar_XA`()
+BEGIN
+	DECLARE Erro INT;
+    XA START 'Processo_01';
+    INSERT INTO `alunosbase`.`Alunos` (`Nome`, `Matricula`, `DataNascimento`) VALUES ('Felipe', '609', '2000-01-01 00:00:00');
+	SET Erro = (SELECT @@warning_count);
+    SELECT Erro;
+    XA END 'Processo_01';
 
-XA ROLLBACK 'Aluno_inserido';
-XA RECOVER;
+    IF(Erro = 0 ) THEN
+        XA PREPARE 'Aluno_inserido';
+		XA COMMIT 'Aluno_inserido';
+        SELECT 'Executado com sueceso';
+	ELSE 
+		XA ROLLBACK 'Aluno_inserido';
+        SELECT 'Ouve um erro no processo';
+    END IF; 
+END
