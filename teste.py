@@ -1,19 +1,15 @@
 
-def a(teste,*arg): # ('ola', 4, 5, 6)
-    return str(arg)+str(teste)
+def Criacao_Bytes(Variavel):
+    a = 0
+    for i in bytes(str(Variavel),'utf-8'): a+=i
+    return str(a)
+def VerificarBytes(Byte,Verificar):
+    if Byte == Verificar:
+        return 'Efetuada com sucesso'
+    else:
+        return 'Erro ao verificar'
 
-def b(**args):  # {'c': '0', 'b': '90'}
-    ListaChaves = []
-    for i in args:
-        ListaChaves.append(i)
-    print(ListaChaves)
-    for a in ListaChaves:
-        print(args[a])
-    return args
+EmojiSenha = Criacao_Bytes("😉🐜🍇")
+SenhaComum = Criacao_Bytes("uvadsffdfuvasdfdsad0")
 
-print(a("a","ola",4,5,6))
-print(b(c="0",b="90"))
-
-# (  ) Tupla 
-# { } Objeto / Dicionario
-# [ ]  Lista / Vetor
+print(VerificarBytes(EmojiSenha,SenhaComum))
