@@ -62,6 +62,9 @@ body{
     margin-left: 6vh;
     border: white 0.5vh solid;
     transition: 2s;
+    color: white;
+    font-size: 2vh;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .criacaoConta a:hover{
