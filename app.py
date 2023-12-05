@@ -26,11 +26,16 @@ def Upload():
     #let = request.get_data()
     input_file = request.files['file'].read()
     f = BytesIO(input_file)
-    Nm_id = request.files['file'].filename  
-    with open(f"{Nm_id}.png", 'wb') as f: 
-        f.write(input_file)
-    print(input_file)
-    return "file"
+    Nm_id = request.files['file'].filename
+    Nm_id_a = request.files['file'].content_length
+    Nm_Tipo = request.files['file'].content_type
+    print(Nm_Tipo)
+    if( Nm_Tipo == "image/jpeg"):
+        with open(f"{Nm_id}.png", 'wb') as f: 
+            f.write(input_file)
+        return "Arquivo concluido!"
+    
+    return "Arquivo não suportado"
 
 #logging.basicConfig(filename='C:/Users/SNMACT145/Desktop/ApiAnaliseDados/logs/Dataserver.log')
 
