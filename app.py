@@ -11,7 +11,7 @@ DadosBrutos = Controler_dadosBrutos()
 app.register_blueprint(Login_route)
 
 app.add_url_rule("/","ListarProdutos",DataRoute_.ListarProdutos,methods=['GET','POST'])
-app.add_url_rule("/dados","ListagemDados",DadosBrutos.ListagemDados)
+app.add_url_rule("/dados","ListagemDados",DadosBrutos.ListagemDados) 
 
 @app.route("/teste")
 def testeRota():
