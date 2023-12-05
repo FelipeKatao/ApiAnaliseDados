@@ -23,10 +23,11 @@ app.add_url_rule("/dados","ListagemDados",DadosBrutos.ListagemDados)
 
 @app.post("/upload")
 def Upload():
-    let = request.get_data()
+    #let = request.get_data()
     input_file = request.files['file'].read()
     f = BytesIO(input_file)
-    with open("Nova_Imagem.png", 'wb') as f: 
+    Nm_id = request.files['file'].filename  
+    with open(f"{Nm_id}.png", 'wb') as f: 
         f.write(input_file)
     print(input_file)
     return "file"
