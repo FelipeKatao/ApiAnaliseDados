@@ -1,8 +1,9 @@
 import logging
 import io
 import os
-from flask import Flask,request
+from flask import Flask,request,g,redirect,url_for
 import requests
+from functools import wraps
 from flask_cors import CORS
 from routes.login_route import Login_route
 from view.data_views import DataRoutes
@@ -16,12 +17,25 @@ DadosBrutos = Controler_dadosBrutos()
 app.register_blueprint(Login_route)
 #app.view_functions['static'] = False    
 app.app_context()
-
+#app.url_map.add(Rule('/', endpoint='index'))
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
 app.add_url_rule("/","ListarProdutos",DataRoute_.ListarProdutos,methods=['GET','POST'])
 app.add_url_rule("/dados","ListagemDados",DadosBrutos.ListagemDados) 
+
+def login_required(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if g.user is None:
+            return redirect(url_for('login', next=request.url))
+        return f(*args, **kwargs)
+    return decorated_function
+ 
+@app.route('/secret_page')
+@login_required
+def secret_page():
+    pass  
 
 @app.post("/upload")
 def Upload():
