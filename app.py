@@ -14,6 +14,8 @@ app = Flask(__name__)
 DataRoute_= DataRoutes()
 DadosBrutos = Controler_dadosBrutos()
 app.register_blueprint(Login_route)
+#app.view_functions['static'] = False    
+app.app_context()
 
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
@@ -35,10 +37,31 @@ def Upload():
     
     return "Arquivo não suportado"
 
+
+@app.route("/static/img/<param>")
+def RouteValues(param):
+    return app.config['UploadFiles']
+
+@app.route("/alterarambiente")
+def alet():
+    app.name = "ModulosAdicionais"
+    return "ambiente trocado com sucesso"
+
+@app.route("/analises")
+def RouteReturn():
+    if 2>1:
+        app.config["UploadFiles"] = "none"
+    return "ok"
+
+@app.do_teardown_appcontext
+def therd(exception):
+    print("Realiza manutenções em caso de erro?")
 #logging.basicConfig(filename='C:/Users/SNMACT145/Desktop/ApiAnaliseDados/logs/Dataserver.log')
 
 app.secret_key = "SECRET KEY"
 app.permanent_session_lifetime = 60
 
+
 if(__name__ == '__main__'):
     app.run(debug=True)
+    

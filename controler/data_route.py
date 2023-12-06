@@ -14,5 +14,8 @@ class Controler_dadosBrutos():
     
     def BaseDados(self):
         return "all data"
+    
+    def Teste(self):
+        print("Executando em segundo plano")
 
     
