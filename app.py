@@ -23,12 +23,12 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 
 app.add_url_rule("/","ListarProdutos",DataRoute_.ListarProdutos,methods=['GET','POST'])
 app.add_url_rule("/dados","ListagemDados",DadosBrutos.ListagemDados) 
-
+user = None
 def login_required(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
-        if g.user is None:
-            return redirect(url_for('login', next=request.url))
+        if user == None:
+            return "404";
         return f(*args, **kwargs)
     return decorated_function
  
