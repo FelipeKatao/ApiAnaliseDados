@@ -23,11 +23,9 @@ app.add_url_rule("/dados","ListagemDados",DadosBrutos.ListagemDados)
 
 @app.post("/upload")
 def Upload():
-    #let = request.get_data()
     input_file = request.files['file'].read()
     f = BytesIO(input_file)
     Nm_id = request.files['file'].filename
-    Nm_id_a = request.files['file'].content_length
     Nm_Tipo = request.files['file'].content_type
     print(Nm_Tipo)
     if( Nm_Tipo == "image/jpeg"):
