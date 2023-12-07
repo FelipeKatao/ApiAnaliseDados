@@ -37,16 +37,35 @@ def login_required(f):
 def secret_page():
     pass  
 
-@app.post("/upload")
-def Upload():
-    input_file = request.files['file'].read()
-    f = BytesIO(input_file)
-    Nm_id = request.files['file'].filename
-    Nm_Tipo = request.files['file'].content_type
-    print(Nm_Tipo)
-    if( Nm_Tipo == "image/jpeg"):
-        with open(f"{Nm_id}.png", 'wb') as f: 
-            f.write(input_file)
+@app.get("/imagem/<nome>/<receita>")
+def ObterImagem(nome,receita):
+    ObterCaminhoRelativo = os.path.relpath("./static/upload/"+nome)   #Caminho relativo 
+    for i  in os.listdir(path=ObterCaminhoRelativo):
+        if(receita in i):
+            return ObterCaminhoRelativo+"/"+i
+    return "Imagem não existe"
+
+@app.post("/upload/<nome>/<receita>")
+def Upload(nome,receita):
+    input_file = request.files['file'].read()      #Recebendo e lendo o arquivo recebido
+    f = BytesIO(input_file)                         # Transformando em Bytes 
+    Nm_id = request.files['file'].filename          #Nome do arquivo
+    
+    NomeReceita = receita+"."+Nm_id.split(".")[1]
+    Nm_Tipo = request.files['file'].content_type    #Tipo do Arquivo
+    PastaExistente = False
+    ObterCaminhoRelativo = os.path.relpath("./static/upload")   #Caminho relativo 
+
+    for i  in os.listdir(path=ObterCaminhoRelativo):
+        if(i == nome):                              #Verifica se a pasta existe
+            PastaExistente = True
+    
+    if(PastaExistente == False):
+        os.mkdir("static/upload/"+nome)         #Criar pasta para o usuario
+
+    if( str("image") in Nm_Tipo):                   #Validao de arquivo
+        with open(f"./static/upload/{nome}/{NomeReceita}", 'wb') as f: #Abrindo para leitura de Bits
+            f.write(input_file) #Escrevendo de Bits para Arquvio
         return "Arquivo concluido!"
     
     return "Arquivo não suportado"

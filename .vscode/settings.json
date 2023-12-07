@@ -13,5 +13,6 @@
             "database": "av",
             "username": "root"
         }
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }
