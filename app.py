@@ -47,23 +47,23 @@ def ObterImagem(nome,receita):
 
 @app.post("/upload/<nome>/<receita>")
 def Upload(nome,receita):
-    input_file = request.files['file'].read()      #Recebendo e lendo o arquivo recebido
-    f = BytesIO(input_file)                         # Transformando em Bytes 
-    Nm_id = request.files['file'].filename          #Nome do arquivo
+    input_file = request.files['file'].read()                   #Recebendo e lendo o arquivo recebido
+    f = BytesIO(input_file)                                     # Transformando em Bytes 
+    NomeArquivo= request.files['file'].filename                 #Nome do arquivo
     
-    NomeReceita = receita+"."+Nm_id.split(".")[1]
-    Nm_Tipo = request.files['file'].content_type    #Tipo do Arquivo
-    PastaExistente = False
+    NomeReceita = receita+"."+NomeArquivo.split(".")[1]         #Escrever o nome do  arquivo
+    Nm_Tipo = request.files['file'].content_type                #Tipo do Arquivo
+    PastaExistente = False                                      # Variavel para verificar se a pasta existe
     ObterCaminhoRelativo = os.path.relpath("./static/upload")   #Caminho relativo 
 
     for i  in os.listdir(path=ObterCaminhoRelativo):
-        if(i == nome):                              #Verifica se a pasta existe
-            PastaExistente = True
+        if(i == nome):                                          #Verifica se a pasta existe
+            PastaExistente = True                               # Se existe fica Verdadeiro
     
-    if(PastaExistente == False):
-        os.mkdir("static/upload/"+nome)         #Criar pasta para o usuario
+    if(PastaExistente == False):                                #Verificar se existe a pasta pela variavel
+        os.mkdir("static/upload/"+nome)                         #Criar pasta para o usuario
 
-    if( str("image") in Nm_Tipo):                   #Validao de arquivo
+    if( str("image") in Nm_Tipo):                               #Validao de arquivo
         with open(f"./static/upload/{nome}/{NomeReceita}", 'wb') as f: #Abrindo para leitura de Bits
             f.write(input_file) #Escrevendo de Bits para Arquvio
         return "Arquivo concluido!"
@@ -71,9 +71,9 @@ def Upload(nome,receita):
     return "Arquivo não suportado"
 
 
-@app.route("/static/img/<param>")
-def RouteValues(param):
-    return app.config['UploadFiles']
+@app.route("/static/upload/<nome>/<param>")
+def RouteValues(nome,param):
+    return "Aceso negado"
 
 @app.route("/alterarambiente")
 def alet():
